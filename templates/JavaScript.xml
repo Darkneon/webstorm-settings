@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="JavaScript">
-  <template name="cl" value="console.log($VAR$);" description="Console.log" toReformat="false" toShortenFQNames="true">
+  <template name="clog" value="console.log($VAR$);" description="Console.log" toReformat="false" toShortenFQNames="true">
     <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
@@ -30,6 +30,73 @@
   <template name="fet" value="$ARRAY$.forEach(function($ELEM$) {&#10;    $END$&#10;}, this);" description=".forEach with this as context" toReformat="false" toShortenFQNames="true">
     <variable name="ARRAY" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ELEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="t" value="this.$PROP$" description="this" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cerr" value="console.error($END$);" description="console.error" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="cl" value="(function() {&#10;    $END$&#10;})();" description="closure" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ctor" value="var $CLASS$ = function($PARAM$) {&#10;    $END$&#10;};" description="constructor" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="m" value="$CLASS$.prototype.$FN$ = function($PARAMS$) {&#10;    $END$&#10;};" description="method" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="jsQualifiedClassName()" defaultValue="Class" alwaysStopAt="true" />
+    <variable name="FN" expression="jsMethodName()" defaultValue="fn" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="params" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if ($COND$) {&#10;    $END$&#10;}" description="if" toReformat="false" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ifel" value="if ($COND$) {&#10;    $END$&#10;}&#10;else {&#10;    &#10;}" description="if else" toReformat="false" toShortenFQNames="true">
+    <variable name="COND" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="o" value="{&#10;    p$END$&#10;};" description="literal object" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="p" value="$PROP$: $VAL$,&#10;$END$" description="literal property" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="so" value="{ sp$END$ };" description="same line literal object" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="sp" value="$PROP$: $VAL$, $END$" description="same line literal property" toReformat="false" toShortenFQNames="true">
+    <variable name="PROP" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
