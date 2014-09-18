@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="JavaScript">
+  <template name="cl" value="console.log($VAR$);" description="Console.log" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="st" value="setTimeout(function() {&#10;    $END$&#10;}, $TIMEOUT$);" description="setTimeout" toReformat="false" toShortenFQNames="true">
+    <variable name="TIMEOUT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="call" value="$FUNC$.call($THIS$, $ARGS$); " description="function.call" toReformat="false" toShortenFQNames="true">
+    <variable name="FUNC" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="THIS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="fe" value="$ARRAY$.forEach(function($ELEM$) {&#10;    $END$&#10;});" description=".forEach" toReformat="false" toShortenFQNames="true">
+    <variable name="ARRAY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ELEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="fet" value="$ARRAY$.forEach(function($ELEM$) {&#10;    $END$&#10;}, this);" description=".forEach with this as context" toReformat="false" toShortenFQNames="true">
+    <variable name="ARRAY" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ELEM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
+
