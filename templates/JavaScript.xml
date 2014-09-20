@@ -101,5 +101,20 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="rnd" value="Math.round($END$);" description="Math.round" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="randi" value="function getRandomInt(min, max) {&#10;    return Math.floor(Math.random() * (max - min)) + min;&#10;}" description="Random for ints" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="randf" value="function getRandomFloat(min, max) {&#10;    return Math.random() * (max - min) + min;&#10;}" description="Random for floats" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
 
