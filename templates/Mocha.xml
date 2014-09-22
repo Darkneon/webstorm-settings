@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Mocha">
+  <template name="desc" value="describe('$GROUP$', function(done) {&#10;    $END$&#10;});" description="Mocha Describe" toReformat="true" toShortenFQNames="true">
+    <variable name="GROUP" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="it" value="it('$TEST$', function(done) {&#10;    $END$&#10;});" description="Mocha It" toReformat="true" toShortenFQNames="true">
+    <variable name="TEST" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
+
